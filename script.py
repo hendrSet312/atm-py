@@ -19,7 +19,7 @@ while atminserted=='CardInside:True':
         atm_run= atm1.selectTransaction(user1)
         if atm_run==None:
             atm1.releaseCard()
-            print("The transaction is finished, you can see the log file for your current activities")
+            print("Thank you for using this ATM, have a nice day :)")
             break
 
 
