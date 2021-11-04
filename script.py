@@ -1,11 +1,11 @@
 from atm import atm_machine
 from user import user
 
-#self,name,pin,accnum,usermoney,realmoney,emoney
+#self,name,pin,id account,balance,realmoney,emoney
 atm1= atm_machine("record.txt",True)
 #userExample= user("John Doe",123456,894327837878,70000,60000,80000)
-user1= user("{Name}","{pin}","{account id}","{bank account}","{real money}","{e-money}")
-user2= user("{Name}","{pin}","{account id}","{bank account}","{real money}","{e-money}")
+user1= user("{Name}","{pin}","{id account}","{bank account}","{real money}","{e-money}")
+user2= user("{Name}","{pin}","{id account}","{bank account}","{real money}","{e-money}")
 #inserting the atm-card and activate the atm machine 
 atm1.condATM=[True,True]
 #run the atm program
