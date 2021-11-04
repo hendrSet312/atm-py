@@ -1,12 +1,9 @@
-from playsound import playsound
-from functools import wraps
 from user import user
 class atm_machine:
-    def __init__(self,script,cardInserted=False,language="ENGLISH",moneyLeft=2000000000):
+    def __init__(self,script,cardInserted=False,moneyLeft=2000000000):
         self.__transc="none"
         self.__script=open(str(script),"a+")
         self.__cardInserted=cardInserted
-        self.__language=language
         self.__moneyLeft=moneyLeft
         self.__active=False
     def releaseCard(self):
@@ -41,9 +38,6 @@ class atm_machine:
             return int(input_pin)== instc.userInfo["pin"]
         except:
             return False
-    def changelang(self,lang):
-        if lang=="INDONESIA":
-            self.__language="INDONESIA"
     def setTransc(self,transaction):
         self.__transc=transaction
     @decorator
