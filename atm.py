@@ -108,10 +108,10 @@ class atm_machine:
     @decorator
     def Transfer (self,instc):
         while True:
-            inputTarget=int(input("""What is the reciever atm code?"""))
+            inputTarget=int(input("""What is the reciever's account number ?"""))
             print(inputTarget)
             if inputTarget in instc.__class__.userid :
-                inputAmmount=int(input(""" How many the cash are you going to transfer?"""))
+                inputAmmount=int(input(""" How much money are you going to transfer?"""))
                 instc.__class__.get(inputTarget)[0].userCash["usercash"]+=inputAmmount
                 self.__script.write("{} is transfering his/her money  in Rp{:,} to {} \n".format(instc.userInfo["username"],inputAmmount,instc.__class__.get(inputTarget)[0].userInfo["username"]))
                 return self.looper("TransferSucceeded",instc)
