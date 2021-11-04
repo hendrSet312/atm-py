@@ -34,7 +34,7 @@ class atm_machine:
     def pinchecker(self,instc):
         self.__script.truncate(0)
         try:
-            input_pin=input("""Please input your ATM card pin...:\n""")
+            input_pin=input("""Please input your pin...:\n""")
             return int(input_pin)== instc.userInfo["pin"]
         except:
             return False
